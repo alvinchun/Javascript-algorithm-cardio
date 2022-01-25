@@ -1,7 +1,5 @@
-// 1. Vowel Count
-const str = "elephant"
- 
-// 1 solution
+// 1. Vowel Count 
+// solution 1
 function getCount(str) {
   var vowelsCount = 0;
   let vowels = ['a','e','i','o','u']
@@ -16,35 +14,25 @@ function getCount(str) {
   return vowelsCount;
 }
 
-console.log(getCount(str));
+console.log(getCount('elephant'));
 
-// 2nd solution
+// solution 2
 function vowelsOnly(str) {
   const vowels = 'aeiouAEIOU'
-  // const newStr =
   return str.split('').filter(i => vowels.includes(i)).length
 }
 
-console.log(vowelsOnly(str));
+console.log(vowelsOnly('ambiguous'));
 
 // 2. Disemvowel Trolls
 
 function disemvowel(str) {
-  const newArr = []
-  const exceptVowels = /[aeiou]/gi
-
-  console.log(exceptVowels);
-  // for (let i = 0; i < str.length; i++) {
-  //   for (let j = 0; j < vowels.length; j++) {
-  //     return newArr.push(str[i] != vowels[j])
-  //   }
-  // }
-  // return newArr
+  return str.replace(/[aeiou]/gi, '')
 }
 
-console.log(disemvowel(str));
+console.log(disemvowel('Hello my name is Alvin'));
 
-//3. Binary Search
+// 3. Binary Search
 let nums = [-1, 0, 3, 5, 9, 12, 13]
 let target = 9
 
