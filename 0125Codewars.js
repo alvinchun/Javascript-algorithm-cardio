@@ -47,3 +47,42 @@ function accum(s) {
 }
 
 console.log(accum("MjtkuBovqrU"));
+
+// 5. Get the Middle Character
+
+function getMiddle(s)
+{
+  const strLength = s.length
+  const strFullIndex = s.length - 1
+
+  return strLength % 2 === 0 ? s[Math.floor(strFullIndex / 2)] + s[Math.ceil(strFullIndex / 2)] : s[(strFullIndex / 2)]
+}
+
+const asdf = 'Mozilla'
+console.log(getMiddle("A"));
+console.log(getMiddle(asdf));
+const a = 'Alvin'
+console.log(a.indexOf('v'));
+
+let arr = ['a', 'b', 'c']
+console.log(arr.includes('a', -3)); // true
+console.log(arr.includes('a', -1)); // false
+console.log(arr.includes('a', -2)); // false
+console.log(arr.includes('a', -4)); // true
+console.log(arr.includes('a', -6)); // true
+console.log(arr.includes('a', -100)); // true
+
+
+function isIsogram(str) {
+  return str.filter(letter => letter != letter ? true : false)
+}
+
+console.log(isIsogram('aaandnc'));
+
+
+
+
+
+
+
+
