@@ -7,7 +7,7 @@ function isIsogram(str) {
 console.log(isIsogram('Dermatoglyphics')); //false
 console.log(isIsogram('abcdefa')); //true
 console.log(isIsogram('qwer')); //true
-console.log(isIsogram('bbbbbbbbbccccccccc')); //false
+// console.log(isIsogram('bbbbbbbbbccccccccc')); //false
 
 // 2. Shortest Word (7)
 
