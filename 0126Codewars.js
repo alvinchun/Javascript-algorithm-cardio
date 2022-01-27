@@ -12,9 +12,9 @@ console.log(isIsogram('bbbbbbbbbccccccccc')); //false
 // 2. Shortest Word (7)
 
 function findShort(s){
-  // return s.split(' ').map(i => i.length).sort((a, b) => a - b)[0]
+  return s.split(' ').map(i => i.length).sort((a, b) => a - b)[0]
   // return Math.min(...s.split(" ").map(s => s.length));
-  console.log(...s);
+  // console.log(...s);
 
 }
 
