@@ -73,11 +73,6 @@ console.log(arr.includes('a', -6)); // true
 console.log(arr.includes('a', -100)); // true
 
 
-function isIsogram(str) {
-  return str.filter(letter => letter != letter ? true : false)
-}
-
-console.log(isIsogram('aaandnc'));
 
 
 
