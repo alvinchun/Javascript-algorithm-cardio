@@ -41,7 +41,7 @@ const romanToInt = (s) => {
   for (i = 0; i < s.length; i++){
     symbol[s[i]] < symbol[s[i+1]] ? totalNum-=symbol[s[i]] : totalNum+=symbol[s[i]]
   }
-  return totalNum;
+  return totalNum
 }
 
 
