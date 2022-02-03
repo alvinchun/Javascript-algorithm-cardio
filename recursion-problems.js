@@ -65,7 +65,7 @@ function recursiveRange(arr){
   return totalNum
 }
 
-recursiveRange([1,2,3,10])
+recursiveRange([1,2,3,10,11])
 
 //5. fibonacci (n th numer is) => ?
 function fibonacci(num) {
