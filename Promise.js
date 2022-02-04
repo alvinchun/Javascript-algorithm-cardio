@@ -34,7 +34,7 @@ getHen()
   .then(console.log)
 
 
-let a
+let a;
 a = 6;
 console.log(a);
 

@@ -61,7 +61,7 @@ function getMiddle(s)
 const asdf = 'Mozilla'
 console.log(getMiddle("A"));
 console.log(getMiddle(asdf));
-const a = 'Alvin'
+// const a = 'Alvin'
 console.log(a.indexOf('v'));
 
 let arr = ['a', 'b', 'c']
