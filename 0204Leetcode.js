@@ -2,18 +2,25 @@ var longestCommonPrefix = function(strs) {
   'use strict';
   if (strs === undefined || strs.length === 0) { return ''; }
   
+  //reduce 는 value 가 하나일때 prev, next 모두가 같은 value 이다.
+  // ex) [1].reduce((prev, next)=> console.log(prev, next)) ==> prev = 1, next = 1
   return strs.reduce((prev, next) => {
     let i = 0;
-    // If there is more than one value, we compare. (there should be prev(first value) and next( second value) and they should be equal)
-    while (prev[i] && next[i] && prev[i] === next[i]) i++; 
-    // If there is only one value in array just returning one value with prev.slice(0,i)
+    console.log(prev)
+
+    // If there is more than one value, we compare. (there should be prev(first value) and next(second value) and they should be equal
+    while (prev[i] && next[i] && prev[i] === next[i]) {
+      // prev 와 next 가 같음으로 flower 워의 모든 index 즉 i는 5까지 쭉 간다
+      i++;
+    }  
+    
     return prev.slice(0, i); 
   });
 };
 console.log(longestCommonPrefix(["flower"]))
-console.log(longestCommonPrefix(["flower", "abcd", "qzp"]))
-console.log(longestCommonPrefix(["flower", "florida", "Flow"]))
-console.log(longestCommonPrefix(["flower", "florida", "floW"]))
+// console.log(longestCommonPrefix(["flower", "abcd", "qzp"]))
+// console.log(longestCommonPrefix(["flower", "florida", "Flow"]))
+// console.log(longestCommonPrefix(["flower", "florida", "floW"]))
 
 
 
@@ -29,7 +36,7 @@ var longestCommonPrefix2 = function(strs) {
   for (let i = 0; i < maxPrefixLength; i++) {
 
     let char = strs[0][i];
-    
+
 // iterating through characters of each value with i
     if (strs.every(str => str[i] === char)) {
       prefix += char;
@@ -41,7 +48,7 @@ var longestCommonPrefix2 = function(strs) {
   return prefix;
 };
 
-console.log(longestCommonPrefix2(["flower"]))
-console.log(longestCommonPrefix(["flower", "florida", "floW"]))
-console.log(longestCommonPrefix(["flower", "florida", "Flow"]))
-console.log(longestCommonPrefix(["flower", "florida", "floW"]))
+// console.log(longestCommonPrefix2(["flower"]))
+// console.log(longestCommonPrefix(["flower", "florida", "floW"]))
+// console.log(longestCommonPrefix(["flower", "florida", "Flow"]))
+// console.log(longestCommonPrefix(["flower", "florida", "floW"]))
