@@ -39,30 +39,24 @@ var isValid = function(s) {
     for(let i=0; i<s.length; i++){
         if(s[i] === '('){
             newArr.push(')')
-            break;
-
         }else if(s[i] === '['){
             newArr.push(']')
-            break;
-
         }else if(s[i] === '{'){
             newArr.push('}')
-            break;
-        }
-        console.log(newArr);
-        
-        if(s[i] !== newArr.pop()){
+        }else if(s[i] !== newArr.pop()){
+            // console.log(s[i]);
             return false
         }
     }
-    
+
+    // console.log(newArr);
     return newArr.length === 0;
     
 };
 
-// isValid('{[]}{}')
-// isValid('{[(}{')
-// isValid('{[]}{')
+console.log(isValid('{[]}{}'));
+console.log(isValid('{[(}{'));
+console.log(isValid('{[]}{'));
 console.log(isValid('{[]}[]'));  
 
 
