@@ -1,19 +1,7 @@
-// var mergeTwoLists = function (list1, list2) {
-//   const newList = list1.concat(list2).sort()
-//   return newList
-// };
-
-
 var mergeTwoLists = function (list1, list2) {
-  let newArr = []
-  list1.map(i => newArr.push(i))
-  list2.map(j => newArr.push(j))
-  return newArr.sort()
+  const newList = list1.concat(list2).sort()
+  return newList
 };
-
-
-
-
 
 console.log(mergeTwoLists([1,2,4], [1,3,4])); 
 console.log(mergeTwoLists([], [])); 
