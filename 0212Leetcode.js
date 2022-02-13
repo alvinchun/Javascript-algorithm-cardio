@@ -29,10 +29,28 @@
 
 // Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
-/**
- * @param {number[]} nums
- * @return {number}
- */
- var maxSubArray = function(nums) {
+// /**
+//  * @param {number[]} nums
+//  * @return {number}
+//  */
+//  var maxSubArray = function(nums) {
     
+// };
+
+
+
+
+//2. Plus One
+var plusOne = function(digits) {
+    // return digits.map(i => String(i)).join('')
+    let number = parseInt(digits.join(''))
+    totalNum = number + 1
+    console.log(totalNum);
+    return String(totalNum).split('')
 };
+
+console.log(plusOne([1,2,3]));
+console.log(plusOne([9,9,9]));
+console.log(plusOne([6,1,4,5,3,9,0,1,9,5,1,8,6,7,0,5,5,4,2]));
+
+console.log('hi')
