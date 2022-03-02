@@ -24,10 +24,32 @@ Constraints:
 1 <= prices.length <= 105
 0 <= prices[i] <= 104 */
 
-var maxProfit = function (prices) {
+// var maxProfit = function (prices) {
   
-  return Math.min(prices)
-    
+//   let maxNum = Math.max(...prices)
+//   let minNum = Math.min(...prices)
+
+//   for (let i = 0; i < prices.length; i++){
+//     if (prices.indexOf(maxNum) > prices.indexOf(minNum)) {
+//       return maxNum - minNum    
+//     }
+//   }
+  
+// };
+
+var maxProfit = function(prices) {
+  var min = Number.MAX_SAFE_INTEGER; 
+  // let min = 0;
+  console.log(min)
+  var max = 0;
+  for (var i = 0; i < prices.length; i++) {
+    min = Math.min(min, prices[i]);
+    console.log(`${i} ${min}`);
+    max = Math.max(max, prices[i] - min);
+    console.log(`${i} ${max}`);
+
+  }
+  return max;
 };
 
 console.log(maxProfit([7,1,5,3,6,4]));
